@@ -1,9 +1,8 @@
 package strategyPattern.Project;
 
-public interface PaymentStrategy {
+public interface PaymentStrategy
+{
 
-    void collectPaymentDetails();
-    boolean validatePaymentDetails();
-    void pay(int amount);
+    int pay(int amount);
 
 }

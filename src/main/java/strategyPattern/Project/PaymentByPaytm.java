@@ -1,29 +1,16 @@
 package strategyPattern.Project;
 
-public class PaymentByPaytm implements PaymentStrategy{
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-    private String mobileno;
-    private String password;
+public class PaymentByPaytm implements PaymentStrategy
+{
+    private static final Logger logger= LogManager.getLogger(PaymentByPaytm.class);
 
-
-    @Override
-    public void collectPaymentDetails()
-    {
-        mobileno="9876567";
-        password="password";
-        System.out.println("Collecting Account details... ");
-    }
 
     @Override
-    public boolean validatePaymentDetails()
+    public int pay(int amount)
     {
-        System.out.println("Validating info..");
-        return true;
-    }
-
-    @Override
-    public void pay(int amount)
-    {
-       System.out.println("Paying "+amount+"using paytm");
+       return amount;
     }
 }
